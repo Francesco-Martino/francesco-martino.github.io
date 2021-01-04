@@ -50,6 +50,8 @@ body{
   height: auto;
   padding: 1vh 20vw;
   margin: 0;
+	margin-bottom: 150px;
+
 }
 .subheader a {
   text-align: justify;
