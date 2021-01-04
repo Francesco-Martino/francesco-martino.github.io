@@ -43,21 +43,42 @@ body{
   border-radius: 0px;
   vertical-align: top;}
 
-.button_right:hover{
+
+.button_right:visited, .button_right:active,  .button_right:link {
+	color: white;
+	text-decoration: none;
+}
+
+.text_left:visited, .text_left:active, .text_left:link {
+	color: white;
+	text-decoration: none;
+}
+
+
+.button_right:hover, .text_left:hover{
 	color: black;
 }
+
 .subheader {
   height: auto;
   padding: 1vh 20vw;
   margin: 0;
-	margin-bottom: 150px;
+	margin-bottom: 150px;}
 
-}
+
 .subheader a {
   text-align: justify;
   margin-left: 20px;
   font-size: 18px;
   display: block;
+}
+
+.subheader a:link{
+	text-decoration: underline;
+	color: red;
+	font-weight: bold;
+	display: inline;
+	margin-left: 0;
 }
 .footer {
 	background: #BC0808;
@@ -70,8 +91,70 @@ body{
 	color: white;
 }
 
-
 .footer a:link {
   color: white;
   text-decoration: none;
 }
+
+/*Publications page */
+
+.publications {
+	height: auto;
+	padding: 1vh 20vw;
+	margin: 0;
+	margin-bottom: 150px;}
+
+.publications h1{
+	font-size: 1.5vw;
+	font-weight: bold;
+	margin: 0;
+}
+
+.publications h2{
+	font-size: 1vw;
+	margin: 0px;
+	font-style: italic;
+}
+
+.publications h3{
+	font-size: 1vw;
+	margin-top: 10px;
+	font-style: italic;
+}
+
+.publications a {
+	padding-bottom: 50px;
+}
+
+.publications a, a:visited, a:hover, a:active {
+	color: inherit;
+}
+
+.publications table{
+	border-bottom: 5px solid red;
+	margin-bottom: 50px;
+}
+
+/* About me page */
+.aboutme {
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+	height: auto;
+	padding: 1vh 25vw;
+	margin: 0;
+	margin-bottom: 150px;}
+
+
+.aboutme a {
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+	text-align: justify;
+	font-size: 18px;
+}
+
+.aboutme a:link{
+	text-decoration: underline;
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+	font-size: 18px;
+	color: red;
+	font-weight: bold;
+}
+
