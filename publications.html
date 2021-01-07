@@ -3,7 +3,7 @@
 	
 	<script>	
 		if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
-			window.location.replace("index_mobile.html");
+//			window.location.replace("index_mobile.html");
 			// Take the user to a different screen here.
 		}
 	</script>
@@ -23,11 +23,44 @@
 	</div>
 	<div class="header-right">
 		<a class="button_right" href="aboutme.html"> About me</a>
-		<a class="button_right" href=""> Research</a>
+		<a class="button_right" href="projects.html"> Projects</a>
 		<a class="button_right" href="https://sites.google.com/unibas.it/orca"> Orcaset</a>
-		<a class="button_right" href=""> Publications</a>
-		<a class="button_right" href=""> Tools</a>
+		<a class="button_right" href="publications.html"> Research</a>
+		
 	</div>
+</div>
+
+	<div class="header_mobile">
+	<table width="auto" height="auto" border="0"  >
+		<tbody>
+				<tr>
+					<td>
+						<div class="container" onclick="myFunction(this)">
+							<div class="bar1"> </div>
+							<div class="bar2"></div>
+							<div class="bar3"></div>
+						
+							</div>
+						</td>
+					<td>
+						
+							<div class="text_title" > Francesco Martino</div>
+							
+					</td>
+			</tr>
+		</tbody>
+	</table>
+<div id="title">
+	<div class="menu">
+								<a class="button" href="aboutme.html"> About me <br></a>
+								<a class="button" href="projects.html"> Projects <br></a>
+								<a class="button" href="https://sites.google.com/unibas.it/orca"> Orcaset <br></a>
+								<a class="button" href="publications.html"> Research <br></a>
+								</div>
+	
+						</div>
+	
+		
 </div>
 	
 	
@@ -122,6 +155,13 @@
 
 	</div>
 	
+	<script>
+	function myFunction(x) {
+		x.classList.toggle("change");
+		var element = document.getElementById("title");
+		element.classList.toggle("change");
+	}
+</script>
 	
 	
 </body>
