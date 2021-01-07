@@ -2,11 +2,18 @@
 /* CSS Document */
 /* Style the header with a grey background and some padding */
 
+
 body{
 	margin: 0;
 	background: #D4E6FF;
-	min-height: 100%;
+	position: relative;
+	min-height: 100vh;
+    padding-bottom:100px;   /* Height of the footer */
+
 }
+
+
+
 .header {
   background: #BC0808;
   height: 10vh;
@@ -15,6 +22,8 @@ body{
   position: sticky;
   top: 0;
 }
+
+
 .header-left {
   position: relative;
   float: left;
@@ -27,13 +36,12 @@ body{
   padding: 0% 10vw;
 }
 .text_left {
-  font-size: 2vw;
+  font-size: 24pt;
   margin-left: 10vw;
   font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
   color: white;
   font-weight: bold;
-  display: block;
-  vertical-align: middle;
+  
 }
 .button_right {
   font-size: 1vw;
@@ -59,6 +67,104 @@ body{
 	color: black;
 }
 
+
+/*mobile header*/
+.header_mobile {
+  background: #BC0808;
+  height: 10vh;
+  line-height: 10vh;
+  padding: 0vw 10vw;
+  position: sticky;
+  top: 0;
+	display: none
+}
+
+
+@media only screen and (max-width: 1200px) {
+  
+  .header_mobile {
+    display: block;
+
+  }
+	.header {
+    display: none;
+
+  }
+	 
+}
+
+
+
+.text_title {
+	font-size: 24pt;
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+	color: white;
+	font-weight: bold;
+	margin: 0px 10px;
+	
+
+}
+
+.button {
+	font-size: 3.5vw;
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+	color: white;
+	font-weight: bold;
+	margin: 6px 1vw;
+
+}
+
+.button:visited, .button:active,  .button:link {
+	color: white;
+	text-decoration: none;
+}
+
+.button:hover, .text_title:hover{
+	color: black;
+}
+
+
+.container {
+	display: inline-block;
+	cursor: pointer;
+	vertical-align: middle;
+}
+
+.container:focus {outline:0 !important;}
+
+
+
+.bar1, .bar2, .bar3 {
+  width: 32px;
+  height: 3px;
+  background-color: white;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.menu {
+	display: none;
+	position: relative;
+	z-index: 2; 
+	background: #BC0808;
+	padding: 0vw 4vw;
+
+}
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+
+.change .menu{display:inline-block;}
+
 .subheader {
 	height: auto;
 	padding: 1vh 20vw;
@@ -83,10 +189,10 @@ body{
 .footer {
 	background: #BC0808;
 	text-align: center;
+	height: 100px;
 	width: 100%;
-	bottom: 0;
 	position: fixed;
-	padding: 15px 0;
+	bottom: 0px;
 	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
 	color: white;
 }
@@ -163,7 +269,7 @@ body{
 .projects {
 	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
 	height: auto;
-	padding: 1vh 25vw;
+	padding: 1vh 0;
 	margin: 0;
 	margin-bottom: 150px;}
 
@@ -179,9 +285,19 @@ body{
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 80vw;
-  position: relative;
-  margin: auto;
+	width: auto;
+	position: relative;
+	margin-top: 10vh;
+	padding-left:  0;
+
+	
+}
+
+.slideshow-container img {width: 40vh;}
+
+@media only screen and (orientation: portrait) and (max-width: 600px){
+	.slideshow-container img{width: 80vw;
+	}
 }
 
 /* Hide the images by default */
@@ -207,12 +323,12 @@ body{
 
 /* Position the "next button" to the right */
 .next {
-  right: 20%;
+  right: 10%;
   border-radius: 3px 0 0 3px;
 }
 
 .prev {
-  left: 20%;
+  left: 10%;
   border-radius: 3px 0 0 3px;
 }
 
@@ -225,10 +341,11 @@ body{
 .text {
   color: black;
   font-size: 18px;
-  padding: 8px 12px;
+  padding: 50px 12px 0px;
   position: absolute;
   bottom: 8px;
   width: 100%;
+	font-weight: bold;
   text-align: center;
 }
 
