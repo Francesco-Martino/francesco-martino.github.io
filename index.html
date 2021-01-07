@@ -3,11 +3,12 @@
 	
 	<script>	
 		if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
-			window.location.replace("index_mobile.html");
+//			window.location.replace("index_mobile.html");
 			// Take the user to a different screen here.
 		}
-	</script>
-	
+		
+		</script>
+		
 	<link rel="stylesheet" href="css/desktop_css.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -29,29 +30,56 @@
 		
 	</div>
 </div>
+
+	<div class="header_mobile">
+	<table width="auto" height="auto" border="0"  >
+		<tbody>
+				<tr>
+					<td>
+						<div class="container" onclick="myFunction(this)">
+							<div class="bar1"> </div>
+							<div class="bar2"></div>
+							<div class="bar3"></div>
+						
+							</div>
+						</td>
+					<td>
+						
+							<div class="text_title" > Francesco Martino</div>
+							
+					</td>
+			</tr>
+		</tbody>
+	</table>
+<div id="title">
+	<div class="menu">
+								<a class="button" href="aboutme.html"> About me <br></a>
+								<a class="button" href="projects.html"> Projects <br></a>
+								<a class="button" href="https://sites.google.com/unibas.it/orca"> Orcaset <br></a>
+								<a class="button" href="publications.html"> Research <br></a>
+								</div>
+	
+						</div>
+	
+		
+</div>
 	
 	
 <body>
 	<div class="subheader">
 		<h1>Hi there, this is me! </h1>
-		<table width="100%" border="0">
-		  <tbody>
-			<tr>
-			  <td><img style="border-radius: 200vh;" src="images/foto.png" width="200vw" height="200vh" alt=""/></td>
-			  <td><a>I am Francesco Martino and I am a PhD candidate in Surgical Pathology: indeed, this is just my course name, because my background is quite varigate, ranging from molecular biology to histopathology and data science. <br> 
+		<img style="border-radius: 200vh; display: block;  margin-left: auto;  margin-right: auto;" src="images/foto.png" width="200vw" height="200vh" alt="" />
+		<a style="font-family: 'Gill Sans', 'Gill Sans MT', 'Myriad Pro', 'DejaVu Sans Condensed', Helvetica, Arial, 'sans-serif'">I am Francesco Martino and I am a PhD candidate in Surgical Pathology: indeed, this is just my course name, because my background is quite varigate, ranging from molecular biology to histopathology and data science. <br> 
 				After a former experiences in a molecular biology lab as BSc student, then I continued as MSc intern student in the Surgical Pathology unit of University Federico II, experiencing wet lab techniques (i.e. H&amp;E, IHC, and Slide Scanning), and I finally moved to histopathology data and images analysis during PhD. <br>
-				I'm graduating in November 2021, hence I will be available for Data Scientist or Pathology Application Specialist roles. Please feel free to get in touch with me via email at </a> <a style="font-weight:bold">f_martino[at]live.it </a> &nbsp;</td>
-			</tr>
-		  </tbody>
-		</table>
-	
+				I'm graduating in November 2021, hence I will be available for Data Scientist or Pathology Application Specialist roles. Please feel free to get in touch with me via email at </a> <a style="font-weight:bold">f_martino[at]live.it </a>
+		
 		
 		<h2> Skills </h2>
 		<a style="font-weight:bold"> Proficient:</a><a> Histopathology techniques, Python (Tensorflow, NumPy, Pandas, scikit-learn, Matplotlib, Seaborn), MS Office Suite </a>
 
 		<a style="font-weight:bold"><br>Knowledgeable:</a><a> Molecular Biology techniques, Tableau, SPSS  </a>
 		
-		<a style="font-weight:bold"><br>Familiar:</a><a> SQL, HTML  </a>	
+		<a style="font-weight:bold"><br>Familiar:</a><a> SQL  </a>	
 	
 		</div>
 	
@@ -66,7 +94,13 @@
 
 	</div>
 	
-	
+	<script>
+	function myFunction(x) {
+		x.classList.toggle("change");
+		var element = document.getElementById("title");
+		element.classList.toggle("change");
+	}
+</script>
 	
 </body>
 </html>
