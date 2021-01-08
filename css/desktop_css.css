@@ -5,7 +5,7 @@
 
 body{
 	margin: 0;
-	background: #D4E6FF;
+	background: #74b3ce;
 	position: relative;
 	min-height: 100vh;
     padding-bottom:100px;   /* Height of the footer */
@@ -15,7 +15,7 @@ body{
 
 
 .header {
-  background: #6A0404;
+  background: #172A3A;
   height: 10vh;
 	width: 100%;
 	display: block;
@@ -75,7 +75,7 @@ body{
 
 /*mobile header*/
 .header_mobile {
-  background: #6A0404;
+  background: #172A3A;
   height: 10vh;
   line-height: 10vh;
   padding: 0vw 10vw;
@@ -154,7 +154,7 @@ body{
 	z-index: 2;
 	border-radius: 1%;
 	border-color: #880505;
-	background: #6A0404;
+	background: #172A3A;
 	opacity: 0.9;
 	padding: 0vw 4vw;
 
@@ -196,7 +196,7 @@ body{
 	margin-left: 0;
 }
 .footer {
-	background:#6A0404;
+	background:#172A3A;
 	
 	text-align: center;
 	height: auto;
