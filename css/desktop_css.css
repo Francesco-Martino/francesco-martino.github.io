@@ -15,12 +15,17 @@ body{
 
 
 .header {
-  background: #BC0808;
+  background: #6A0404;
   height: 10vh;
+	width: 100%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
   line-height: 10vh;
-  padding: 0vw 10vw;
+  padding: 0vw 0vw;
   position: sticky;
   top: 0;
+
 }
 
 
@@ -33,11 +38,11 @@ body{
   position: relative;
   float: right;
   line-height: 10vh;
-  padding: 0% 10vw;
+  padding: 0% 15vw;
 }
 .text_left {
   font-size: 24pt;
-  margin-left: 10vw;
+  margin-left: 15vw;
   font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
   color: white;
   font-weight: bold;
@@ -70,10 +75,11 @@ body{
 
 /*mobile header*/
 .header_mobile {
-  background: #BC0808;
+  background: #6A0404;
   height: 10vh;
   line-height: 10vh;
   padding: 0vw 10vw;
+	
   position: sticky;
   top: 0;
 	display: none
@@ -145,8 +151,11 @@ body{
 .menu {
 	display: none;
 	position: relative;
-	z-index: 2; 
-	background: #BC0808;
+	z-index: 2;
+	border-radius: 1%;
+	border-color: #880505;
+	background: #6A0404;
+	opacity: 0.9;
 	padding: 0vw 4vw;
 
 }
@@ -187,20 +196,29 @@ body{
 	margin-left: 0;
 }
 .footer {
-	background: #BC0808;
+	background:#6A0404;
+	
 	text-align: center;
-	height: 100px;
+	height: auto;
 	width: 100%;
 	position: fixed;
 	bottom: 0px;
 	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
 	color: white;
 }
+.footer a{
+	
+	font-size: 18px;
+}
+
+
 
 .footer a:link {
   color: white;
   text-decoration: none;
 }
+
+
 
 /*Publications page */
 
@@ -211,19 +229,19 @@ body{
 	margin-bottom: 150px;}
 
 .publications h1{
-	font-size: 1.5vw;
+	font-size: 3.5vh;
 	font-weight: bold;
 	margin: 0;
 }
 
 .publications h2{
-	font-size: 1vw;
+	font-size: 2vh;
 	margin: 0px;
 	font-style: italic;
 }
 
 .publications h3{
-	font-size: 1vw;
+	font-size: 1.5vh;
 	margin-top: 10px;
 	font-style: italic;
 }
