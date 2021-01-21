@@ -295,6 +295,7 @@ body{
     display: block;
     overflow-x: auto;
     white-space: nowrap;
+	font-size: 18px;
 
 }
 
