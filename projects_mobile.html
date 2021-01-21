@@ -10,6 +10,31 @@
 	
 	<link rel="stylesheet" href="css/desktop_css.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script>
+		$(function() {
+  // this initializes the dialog (and uses some common options that I do)
+  $("#dialog").dialog({
+    autoOpen : false, modal : true, show : "blind", hide : "blind", color: "red"
+  });
+  $("#dialogbreast").dialog({
+    autoOpen : false, modal : true, show : "blind", hide : "blind", color: "red"
+  });
+
+  // next add the onclick handler
+  $("#ismi").click(function() {
+    $("#dialog").dialog("open");
+    return false;
+  });
+
+	$("#breast").click(function() {
+    $("#dialogbreast").dialog("open");
+    return false;
+  });
+});
+	</script>
 
 <head>
 <meta charset="utf-8">
@@ -66,7 +91,10 @@
 	
 	
 <body>
+		
 	<div class="projects">
+		
+				
 		<h1 style="padding-left: 10vw;" >Projects</h1>
 		<a style="padding-left: 10vw;">This page will receive continuous updates. Click on the images for project details.&nbsp;</a>
 		
@@ -86,10 +114,16 @@
 			</tr>
 			<tr>
 			<td>
-				<img class="img_slider" src="images/ismi.PNG" style="border-radius: 100%" alt="none" onclick="alert('A pulmonary nodule is a small round or oval-shaped growth in the lung, and it can be detected using a chest CT images. There are 5 main categories of nodules: \n - solid nodule \n - ground-glass nodules \n - semi-solid nodules \n - calcified nodules \n - spiculated nodules. \n Countless pulmonary nodules are discovered each year during chest X-rays or CT scans. Most nodules are noncancerous (benign). A solitary pulmonary nodule is found on up to 0.2% of all chest X-rays films. Lung nodules can be found on up to half of all lung CT scans. Risk factors for malignant pulmonary nodules include a history of smoking and older age. This challenge aims to develop a machine-learning multi-class classification system, and my algorithm achieved an accuracy of 0.59 out of a max result of 0.66')">
+				<a href="#" id="ismi"><img class="img_slider" src="images/ismi.PNG" style="border-radius: 100%" alt="none"></a>
+				<div id="dialog" title="Ismi nodules classification">
+					<p>A pulmonary nodule is a small round or oval-shaped growth in the lung, and it can be detected using a chest CT images. There are 5 main categories of nodules: \n - solid nodule \n - ground-glass nodules \n - semi-solid nodules \n - calcified nodules \n - spiculated nodules. \n Countless pulmonary nodules are discovered each year during chest X-rays or CT scans. Most nodules are noncancerous (benign). A solitary pulmonary nodule is found on up to 0.2% of all chest X-rays films. Lung nodules can be found on up to half of all lung CT scans. Risk factors for malignant pulmonary nodules include a history of smoking and older age. This challenge aims to develop a machine-learning multi-class classification system, and my algorithm achieved an accuracy of 0.59 out of a max result of 0.66"</p>
+				</div>
 				</td>
 				<td>
-				<img class="img_slider" src="images/breastcancer.png" style="border-radius: 100%" alt="none">
+				<a href="#" id="breast"><img class="img_slider" src="images/breastcancer.png" style="border-radius: 100%" alt="none"></a>
+				<div id="dialogbreast" title="Breast Cancer classification">
+					<p>This breast cancer database was obtained from the University of Wisconsin Hospitals, Madison from Dr. William H. Wolberg. In this Kaggle competition, the aim is to build a model to predict class of Cancer on the basis of nuclii conditions like clumpthickness, uniformityofcellsize, uniformityofcellshape, marginaladhesion, singleepithelialcellsize ,barenuclei ,blandchromatin, normalnucleoli, and mitosis. I trained a model which accuracy resulted 0.985This breast cancer database was obtained from the University of Wisconsin Hospitals, Madison from Dr. William H. Wolberg. In this Kaggle competition, the aim is to build a model to predict class of Cancer on the basis of nuclii conditions like clumpthickness, uniformityofcellsize, uniformityofcellshape, marginaladhesion, singleepithelialcellsize ,barenuclei ,blandchromatin, normalnucleoli, and mitosis. I trained a model which accuracy resulted 0.985</p>
+				</div>
 				</td>
 				
 				<td>
@@ -127,7 +161,6 @@
 	}
 </script>
 
-	
 	
 </body>
 </html>
