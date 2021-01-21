@@ -298,7 +298,9 @@ body{
 
 }
 
-.img_slider {width: 40vh;}
+.slidermobile td{width: 10vh;}
+
+.img_slider {width: 40vh; margin: 0 30px;}
 
 .projects a {
 	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
