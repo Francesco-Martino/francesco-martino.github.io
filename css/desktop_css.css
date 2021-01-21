@@ -427,3 +427,11 @@ body{
   from {opacity: .4}
   to {opacity: 1}
 }
+
+
+
+/* Popup box BEGIN */
+.ui-dialog,.ui-dialog,.ui-widget, .ui-widget-content, .ui-corner-all, .foo, .ui-draggable, .ui-resizable {
+	background:#172A3A !important; 
+	margin: 10px 30px; 
+	color: white}
