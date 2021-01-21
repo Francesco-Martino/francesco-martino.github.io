@@ -291,6 +291,14 @@ body{
 	margin: 0;
 	margin-bottom: 150px;}
 
+.slidermobile table{
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+
+}
+
+.img_slider {width: 40vh;}
 
 .projects a {
 	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
