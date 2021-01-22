@@ -6,7 +6,7 @@
 body{
 	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
 	margin: 0;
-	background: #468C98;
+	background: #BFD3C1;
 	position: relative;
 	min-height: 100vh;
     padding-bottom:100px;   /* Height of the footer */
@@ -16,16 +16,21 @@ body{
 .body_col{
     min-height: 96vh;
     margin: 2% 20%;
-	background: #984447;
-    box-shadow: 0px 0px 15px 15px #101419;
+	background: #68a691;
+    
     color: white;
+}
+
+@media only screen and (max-width: 1200px){
+	
+	.body_col{margin: 2% 0%;}
 }
 
 header {
     text-align: center;
     margin: 10px;
     padding: 10px;
-	font-size: 4vw;
+	font-size: 48pt;
 }
 
 bulk h1{
@@ -36,31 +41,30 @@ bulk h1{
 }
 
 navigation{
-	background: #3E1B1C;
+	background: #ffe5d4;
 	display: flex;
 	justify-content: space-between;
 	
 }
 
 .nav a { 
-	font-size: 1.5vw;
+	font-size: 13pt;
 	float:center;
-	margin:10px 60px;
 	text-decoration: none;
-	color: white;
+	color: black;
 }
 
 .nav a:link, a:active, a:visited {
-	font-size: 1.5vw;
+	font-size: 13pt;
 	float:center;
-	margin:10px 60px;
+	padding:5px 3vw;
 	text-decoration: none;
-	color: white;
+	color: black;
 }
 
 
 .nav a:hover{
-	color: black;
+	color: white;
 	
 }
 
@@ -69,7 +73,7 @@ aboutme {
 }
 
 aboutme p{
-	font-size: 1vw;
+	font-size: 14pt;
 	float:center;
 	display: block;
 	margin:10px 60px;
@@ -78,7 +82,7 @@ aboutme p{
 
 aboutme a, a:link{
 	display: inline;
-	font-size: 1vw;
+	font-size: 14pt;
 	margin:10px 0px;
 	color: skyblue;
 	font-weight: bold;
@@ -95,7 +99,7 @@ aboutme a:hover{
 
 projects p{
 	text-align: center;
-	font-size: 1vw;
+	font-size: 13pt;
 	margin:10px 60px;
 
 }
@@ -107,7 +111,7 @@ projects p{
 }
 
 .restable h1{
-	color: #468c98;
+	color: #694f5d;
 	margin-top: 0;
 	font-size: 30px;
 
@@ -139,12 +143,19 @@ projects p{
 
 
 .footer{
-	font-size: 16px;
+	font-size: 12pt;
 	margin-top: 6vh;
-	background: #468C98;
-	padding: 3vh ;
+	background: #BFD3C1;
+	padding: 3vh 3vh 0;
 	text-align: center;
+	color: black;
 }
+
+.footer a{
+	margin: 0;
+		
+}
+
 
 /* Slideshow container */
 .slideshow-container {
@@ -156,7 +167,7 @@ projects p{
 	
 }
 
-.slideshow-container img {width: 40vh;}
+.slideshow-container img {width: 40%;}
 
 /* Hide the images by default */
 .mySlides {
