@@ -1,92 +1,215 @@
 <!doctype html>
 <html>
-	
 	<script>	
 		if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
-//			window.location.replace("index_mobile.html");
+			window.location.replace("index_mobile.html");
 			// Take the user to a different screen here.
 		}
-		
-		</script>
-		
-	<link rel="stylesheet" href="css/desktop_css.css">
+	</script>
+	<link rel="stylesheet" href="css/new_desktop.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	
+	<script>
+		$(function() {
+  // this initializes the dialog (and uses some common options that I do)
+  $("#dialog").dialog({
+    autoOpen : false, modal : true, show : "blind", hide : "blind", color: "red",
+	 
+  });
+  $("#dialogbreast").dialog({
+    autoOpen : false, modal : true, show : "blind", hide : "blind", color: "red"
+  });
 
+  // next add the onclick handler
+  $("#ismi").click(function() {
+    $("#dialog").dialog("open");
+    return false;
+  });
+
+	$("#breast").click(function() {
+    $("#dialogbreast").dialog("open");
+    return false;
+  });
+});
+	</script><script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script>
+		$(function() {
+  // this initializes the dialog (and uses some common options that I do)
+  $("#dialog").dialog({
+    autoOpen : false, modal : true, show : "blind", hide : "blind", color: "red"
+  });
+  $("#dialogbreast").dialog({
+    autoOpen : false, modal : true, show : "blind", hide : "blind", color: "red"
+  });
+
+  // next add the onclick handler
+  $("#ismi").click(function() {
+    $("#dialog").dialog("open");
+    return false;
+  });
+
+	$("#breast").click(function() {
+    $("#dialogbreast").dialog("open");
+    return false;
+  });
+});
+	</script>
+	
+
+	
 <head>
 <meta charset="utf-8">
 <title>Francesco Martino</title>
-
+		
 </head>
 
-<div class="header">
-	<div class="header-left">
-		<a class="text_left" href="index.html"> Francesco Martino</a>
-	</div>
-	<div class="header-right">
-		<a class="button_right" href="aboutme.html"> About me</a>
-		<a class="button_right" href="projects.html"> Projects</a>
-		<a class="button_right" href="https://sites.google.com/unibas.it/orca"> Orcaset</a>
-		<a class="button_right" href="publications.html"> Research</a>
-		
-	</div>
-</div>
-
-	<div class="header_mobile">
-	<table width="auto" height="auto" border="0"  >
-		<tbody>
-				<tr>
-					<td>
-						<div class="container" onclick="myFunction(this)">
-							<div class="bar1"> </div>
-							<div class="bar2"></div>
-							<div class="bar3"></div>
-						
-							</div>
-						</td>
-					<td>
-						
-							<div class="text_title"  href="index.html" > Francesco Martino</div>
-							
-					</td>
-			</tr>
-		</tbody>
-	</table>
-<div id="title">
-	<div class="menu">
-								<a class="button" href="aboutme.html"> About me <br></a>
-								<a class="button" href="projects.html"> Projects <br></a>
-								<a class="button" href="https://sites.google.com/unibas.it/orca"> Orcaset <br></a>
-								<a class="button" href="publications.html"> Research <br></a>
-								</div>
-	
-						</div>
-	
-		
-</div>
-	
-	
 <body>
-	<div class="subheader">
-		<h1>Welcome </h1>
-		<img style="border-radius: 200vh; display: block;  margin-left: auto;  margin-right: auto;" src="images/foto.png" width="200vw" height="200vh" alt="" />
-		<a style="font-family: 'Gill Sans', 'Gill Sans MT', 'Myriad Pro', 'DejaVu Sans Condensed', Helvetica, Arial, 'sans-serif';">I am Francesco Martino and I am a PhD candidate in Surgical Pathology: indeed, this is just my course name, because my background is quite varigate, ranging from molecular biology to histopathology and data science. <br> 
-				After a former experiences in a molecular biology lab as BSc student,  I continued as MSc intern student in the Surgical Pathology unit of University Federico II, experiencing wet lab techniques (i.e. H&amp;E, IHC, and Slide Scanning), and then I finally moved to histopathology data and images analysis during PhD. <br>
-				I'm graduating in November 2021, hence I will be available for Data Scientist or Pathology Application Specialist roles. Please feel free to get in touch with me via email at: </a><a style="font-weight:bold; ">f_martino[at]live.it</a>
+	<div class="body_col">
+		<header class="header" id="header" style="color: #ADD9F4;"><a href="index.html"></a>Francesco Martino</header>
+		<navigation class="nav"> <a href="#about_me">About me</a> <a href="#projects">Projects</a> <a href="https://sites.google.com/unibas.it/orca">Orcaset</a> <a href="#research">Research</a> </navigation>
+		<bulk>
+		<aboutme id="about_me">
+			<h1>About me</h1>
+			<img src="images/foto.png" width="30%" style="border-radius: 100%; margin:0px 35%;" alt="myphoto">
+			<p>I am a PhD candidate in Biomorfological and Surgical Sciences at the University of Naples Federico II. My research focus is the analysis of Oral Squamous Cell carcinoma via both pathology-dedicated platforms (as QuPath or Leica Genie) and "pure" computational pathology approaches (mainly Python and its libraries). Moreover, I have experience in data analysis and visualization using SPSS, Tableau and Python's libraries Matplotlib, Seaborn, Numpy, Scikit-Learn, and Pandas. <br>	
+			Before starting my PhD, I graduated in Medical Biotechnologies (summa cum laude), defending a thesis entitled "A digital pathology approach to oral squamous cell carcinoma", quantitatively analysing CAF-1\p60 levels in OSCC Samples. During the internship, I also worked in a "wet" lab, performing H\&amp; E and IHC staining, tissues embedding and sectioning, and HPV detection with Inno-Lipa. <br>
+			Formerly, I graduated in Health Biotechnologies (summa cum laude), with an experience as an Erasmus Exchange student at Sabanci University, Istanbul. There, I had the opportunity to work in a molecular biology laboratory, experiencing techniques as Dual Luciferase Assay, western blotting, DNA electrophoresis.<br><a href="https://drive.google.com/file/d/17PtBVi8Tw1Vo1TSxggpWOFA4LPOaMrbc/view?usp=sharing">Here</a> you can find an updated version of my CV. More questions? Please, connect with me with any of the link in the footer </p>
+		</aboutme>
 		
+		<projects id="projects">
+		<h1>Projects</h1>
+		<p>This page will receive continuous updates. Click on the images for project details.&nbsp;</p>
 		
-	  <h2> Skills </h2>
-		<a style="font-weight:bold"> Proficient:</a><a> Histopathology techniques, Python (Tensorflow, NumPy, Pandas, scikit-learn, Matplotlib, Seaborn), MS Office Suite </a>
+		 <!-- Slideshow container -->
+		<div class="slideshow-container">
 
-		<a style="font-weight:bold"><br>Knowledgeable:</a><a> Molecular Biology techniques, Tableau, SPSS  </a>
-		
-		<a style="font-weight:bold"><br>Familiar:</a><a> SQL  </a>	
-		
-		       
-		</div>
+		  <!-- Full-width images with number and caption text -->
+			
+			<div class="mySlides fade" align="center">
+			<a href="#" id="ismi"><img class="img_slider" src="images/ismi.PNG" style="border-radius: 100%" alt="none"></a>
+				<div id="dialog" title="Ismi nodules classification">
+					<p>A pulmonary nodule is a small round or oval-shaped growth in the lung, and it can be detected using a chest CT images. There are 5 main categories of nodules: solid nodule, ground-glass nodules, semi-solid nodules, calcified nodules, spiculated nodules. Countless pulmonary nodules are discovered each year during chest X-rays or CT scans. Most nodules are noncancerous (benign). A solitary pulmonary nodule is found on up to 0.2% of all chest X-rays films. Lung nodules can be found on up to half of all lung CT scans. Risk factors for malignant pulmonary nodules include a history of smoking and older age. This challenge aims to develop a machine-learning multi-class classification system, and my algorithm achieved an accuracy of 0.59 out of a max result of 0.66</p>
+				</div>
+			<div class="text"> ISMI nodules multi-class classification system</div>
+		  </div>
+			
+		  <div class="mySlides fade" align="center">
+			<a href="#" id="breast"><img class="img_slider" src="images/breastcancer.png" style="border-radius: 100%" alt="none"></a>
+				<div id="dialogbreast" title="Breast Cancer classification">
+					<p>This breast cancer database was obtained from the University of Wisconsin Hospitals, Madison from Dr. William H. Wolberg. In this Kaggle competition, the aim is to build a model to predict class of Cancer on the basis of nuclii conditions like clumpthickness, uniformityofcellsize, uniformityofcellshape, marginaladhesion, singleepithelialcellsize, barenuclei, blandchromatin, normalnucleoli, and mitosis. I trained a model which accuracy resulted 0.985</p>
+				</div>
+			<div class="text"> Breast cell nuclei categories to predict breast cancer</div>
+			</div>
+			
+			<div class="mySlides fade" align="center">
+				<a href="index_mobile.html"><img src="images/positivecelldetection.png" style="border-radius: 100%" alt="none"></a>
+				<div class="text"> IHC Positive cells detection</div>
+			</div>
+			
+			<div class="mySlides fade" align="center">
+				<a href="index_mobile.html"><img src="images/chest-xray.jpg" style="border-radius: 100%" alt="none"></a>
+				<div class="text"> Pulmonary nodule classification from Chest X-Ray</div>
+			</div>
+			
+			<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+			<a class="next" onclick="plusSlides(1)">&#10095;</a>
+			</div>
+			<br>
+			
+			<!-- The dots/circles -->
+			<div style="text-align:center">
+				<span class="dot" onclick="currentSlide(1)"></span>
+				<span class="dot" onclick="currentSlide(2)"></span>
+				<span class="dot" onclick="currentSlide(3)"></span>
+				<span class="dot" onclick="currentSlide(4)"></span>
+				
+			</div> 
+			
+			</projects>
+			
+			<research id="research">
+			<h1> Research </h1>
+				<table class="restable" width="auto">
+					<tbody>
+						<tr class="tableborder">
+							<td> 
+				  <h2>Appl. Sci. 2020, 10, 8285.</h2>
+				  <h1> Deep Learning-Based Pixel-Wise Lesion Segmentation on Oral Squamous Cell Carcinoma Images</h1> 
+				  <h3>Francesco Martino, Domenico D. Bloisi, Andrea Pennisi, Mulham Fawakherji, Gennaro Ilardi, Daniela Russo, Daniele Nardi, Stefania Staibano, and Francesco Merolla</h3>
+				  </td>
+			  </tr>
+			<tr>
+			  <td><img style="border-radius: 200vh; display: block; margin-left: auto; margin-right: auto; " src="images/deeplearning-appsciences.jpg" width="200vw" height="200vh" alt=""/></td>
+			 </tr>
+			
+			  <tr class="tablerow">
+				  <td>
+				  <a>Oral squamous cell carcinoma is the most common oral cancer. In this paper, we present a performance analysis of four different deep learning-based pixel-wise methods for lesion segmentation on oral carcinoma images. Two diverse image datasets, one for training and another one for testing, are used to generate and evaluate the models used for segmenting the images, thus allowing to assess the generalization capability of the considered deep network architectures. An important contribution of this work is the creation of the Oral Cancer Annotated (ORCA) dataset, containing ground-truth data derived from the well-known Cancer Genome Atlas (TCGA) dataset.</a> <a href="https://www.mdpi.com/2076-3417/10/22/8285"> [Read more] </a>
+				  </td>
+			    </tr>
+
+			  <tr class="tableborder">
+				  			  <td> 
+
+			  <h2>Frontiers 2020, 10, 2112</h2>
+				  <h1>Expression of P16INK4a in Uveal Melanoma: New Perspectives</h1> 
+				  <h3>Daniela Russo, Rosa Maria Di Crescenzo, Giuseppe Broggi, Francesco Merolla, Francesco Martino, Silvia Varricchio, Gennaro Ilardi, Alessandra Borzillo, Raffaella Carandente, Sara Pignatiello, Massimo Mascolo, Rosario Caltabiano, and Stefania Staibano</h3>
+				  </td>
+				   </tr>
+			<tr>
+				  
+				<td><img style="border-radius: 200vh; display: block; margin-left: auto; margin-right: auto;" src="images/p16uveal.jpg" width="200vw" height="200vh" alt=""/></td>
+			  </tr>
+			  <tr class="tablerow">
+				  <td>
+				  <a>Uveal melanoma (UM) is the most common intraocular tumor in adults. Despite sharing the name and similar morphological features with cutaneous melanoma (CM), it is an entirely different neoplasia with a particular genetic background and clinical behavior. CDKN2A is a gene located at chromosome 9p21, encoding for P16INK4a and P14(ARF) proteins, whose role as a tumor suppressor has been clearly defined in many malignant tumors. CDKN2A frequently presents germline mutations in familial CM and epigenetic downregulation in a considerable percentage of sporadic CM...</a> <a href="https://www.frontiersin.org/articles/10.3389/fonc.2020.562074/full"> [Read more] </a>
+				  </td>
+			    </tr>
+				  
+			  
+			  <tr class="tableborder">
+			  <td> 
+				  <h2>Cancers 2020, 12, 1344. 2018</h2>
+				  <h1>A Machine-Learning Approach for The Assessment of The Proliferative Compartment of Solid Tumors On Hematoxylineosin-Stained Sections</h1> 
+				  <h3>Francesco Martino, Silvia Varricchio, Daniela Russo, Francesco Merolla, Gennaro Ilardi, Massimo Mascolo, Giovanni Orabona dell’Aversana, Luigi Califano, Guglielmo Toscano, Giuseppe De Pietro, Maria Frucci, Nadia Brancati, Filippo Fraggetta, and Stefania Staibano</h3>
+				  </td>
+			  </tr>
+			  			  <tr>
+
+			  
+			  			  <td><img style="border-radius: 200vh; display: block; margin-left: auto; margin-right: auto;" src="images/deeplearning-appsciences.jpg" width="200vw" height="200vh" alt=""/></td>
+			  </tr>
+			  <tr class="tablerow">
+				  <td>
+				  <a>We introduce a machine learning-based analysis to predict the immunohistochemical (IHC) labeling index for the cell proliferation marker Ki67/MIB1 on cancer tissues based on morphometrical features extracted from hematoxylin and eosin (H\&amp;E)-stained formalin-fixed, paraffin-embedded (FFPE) tumor tissue samples. We provided a proof-of-concept prediction of the Ki67/MIB1 IHC positivity of cancer cells through the definition and quantitation of single nuclear features...</a> <a href="https://www.mdpi.com/2072-6694/12/5/1344"> [Read more] </a>
+				  </td>
+			    </tr>
 	
-	 
+			  <tr class="tableborder">
+				  <td>
+			  <h2>Int J Mol Sci. 2018;19(3):883</h2>
+				  <h1>HPV Virus Transcriptional Status Assessment in A Case of Sinonasal Carcinoma</h1> 
+				  <h3>Gennaro Ilardi, Daniela Russo, Silvia Varricchio, Giovanni Salzano, Giovanni Dell'Aversana Orabona, Virginia Napolitano, Rosa Maria Di Crescenzo, Alessandra Borzillo, Francesco Martino, Francesco Merolla, Massimo Mascolo, and Stefania Staibano</h3>
+				  </td>
+			  </tr>
+			<tr> 
+			  <td><img style="border-radius: 200vh; display: block; margin-left: auto; margin-right: auto;" src="images/hpvsinovialintj.png" width="200vw" height="200vh" alt=""/></td>
+				  
+			  </tr>
+			  <tr style="margin-bottom: 50px;">
+				  <td>
+				  <a>Human Papilloma Virus (HPV) can play a causative role in the development of sinonasal tract malignancies. In fact, HPV may be the most significant causative agent implicated in sinonasal tumorigenesis and is implicated in as many as 21% of sinonasal carcinomas. To date, there are no definitive, reliable and cost-effective, diagnostic tests approved by the FDA for the unequivocal determination of HPV status in head and neck cancers...</a> <a href="https://www.mdpi.com/1422-0067/19/3/883"> [Read more] </a>
+				  </td>
+			    </tr>
+		  </tbody>
+		</table>
 	
-	<div class="footer">
+		</research>
+			
+		<div class="footer">
 	
 		<a>Francesco Martino <br> University of Naples Federico II <br> f_martino[at]live.it <br> </a>
 		<a> Connect with me: <br> </a>
@@ -96,6 +219,41 @@
 		<a href="https://www.facebook.com/francesco.b.martino/" class="fa fa-facebook" style="color: white"></a>
 
 	</div>
+		</bulk>
+	 </div>
+</body>
+	
+		<script>
+	
+	var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+} 
+	</script>	
 	
 	<script>
 	function myFunction(x) {
@@ -104,6 +262,5 @@
 		element.classList.toggle("change");
 	}
 </script>
-	
-</body>
+
 </html>
