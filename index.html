@@ -15,12 +15,21 @@
 		$(function() {
   // this initializes the dialog (and uses some common options that I do)
   $("#dialog").dialog({
-    autoOpen : false, modal : true, show : "blind", hide : "blind", color: "red",
+    autoOpen : false, modal : true, show : "blind", hide : "blind", color: "red", width: "80%"
 	 
   });
   $("#dialogbreast").dialog({
-    autoOpen : false, modal : true, show : "blind", hide : "blind", color: "red"
+    autoOpen : false, modal : true, show : "blind", hide : "blind", color: "red", width: "80%"
   });
+
+  $("#dialogIHC").dialog({
+    autoOpen : false, modal : true, show : "blind", hide : "blind", color: "red", width: "80%"
+  });
+  
+  $("#dialogChestXRay").dialog({
+    autoOpen : false, modal : true, show : "blind", hide : "blind", color: "red", width: "80%"
+  });
+
 
   // next add the onclick handler
   $("#ismi").click(function() {
@@ -30,6 +39,10 @@
 
 	$("#breast").click(function() {
     $("#dialogbreast").dialog("open");
+    return false;
+  });
+	$("#IHC").click(function() {
+    $("#dialogIHC").dialog("open");
     return false;
   });
 });
@@ -105,8 +118,11 @@
 			</div>
 			
 			<div class="mySlides fade" align="center">
-				<a href="index_mobile.html"><img src="images/positivecelldetection.png" style="border-radius: 100%" alt="none"></a>
-				<div class="text"> IHC Positive cells detection</div>
+				<a href="#" id="IHC"><img class="img_slider" src="images/positivecelldetection.png" style="border-radius: 100%" alt="none"></a>
+				<div id="dialogIHC" title="Positive cell detection">
+					<p>Immunohistochemestry is one of the most used histopathological techniques to refine diagnosis, prognosis and therapeutical response. Several methods have been proposed to asses immunohitochemical expression (both quantitative and semiquantitative), but visual esamination still is the most common one. In this on-going project I am trying to develop an accurate and reproducibile method to quantitatively evaluate IHC expression. </p>
+				</div>
+				<div class="text"> IHC expression quantification in tumour whole slide images</div>
 			</div>
 			
 			<div class="mySlides fade" align="center">
